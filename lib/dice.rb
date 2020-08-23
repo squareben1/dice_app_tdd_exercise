@@ -13,15 +13,17 @@ class Dice
     @roll_history.concat arr
   end
 
-  def set_score(arr)
-    @last_score = arr.sum
-  end
-
   def show_rolls
     @roll_history
   end
 
   def get_score
     @last_score
+  end
+
+  private
+
+  def set_score(arr)
+    @last_score = arr.sum
   end
 end

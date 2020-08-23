@@ -21,14 +21,20 @@ describe Dice do
   end
 
   describe '#show_rolls' do
-    it 'returns single roll' do
+    it 'returns single saved roll' do
       subject.roll
       expect(subject.show_rolls).to eq [3]
+    end
+
+    it 'returns multi saved rolls' do
+      subject.roll
+      subject.roll
+      expect(subject.show_rolls).to eq [3, 6]
     end
   end
 
   describe '#set_score' do
-    it 'sets score attribute' do
+    it 'sets last_score attribute based on last roll' do
       subject.roll
       expect(subject.get_score).to eq 3
     end
