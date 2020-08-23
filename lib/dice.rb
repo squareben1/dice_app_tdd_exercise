@@ -9,8 +9,12 @@ class Dice
     num.times do
       arr << rand(1..6)
     end
-    @last_score = arr.sum
+    set_score(arr)
     @roll_history.concat arr
+  end
+
+  def set_score(arr)
+    @last_score = arr.sum
   end
 
   def show_rolls
