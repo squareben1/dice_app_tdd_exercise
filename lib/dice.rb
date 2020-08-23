@@ -10,7 +10,8 @@ class Dice
       arr << rand(1..6)
     end
     set_score(arr)
-    @roll_history.concat arr
+    add_roll(arr)
+    arr
   end
 
   def show_rolls
@@ -25,5 +26,9 @@ class Dice
 
   def set_score(arr)
     @last_score = arr.sum
+  end
+
+  def add_roll(arr)
+    @roll_history.concat arr
   end
 end

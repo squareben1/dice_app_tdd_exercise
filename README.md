@@ -10,7 +10,7 @@ cd dice_app
 rspec --init
 ```
 
-Here are some user stories. For each of them, follow the TDD process from your diagram.
+Here are some user stories. For each of them, follow TDD process.
 
 ```
 As a board game player,
